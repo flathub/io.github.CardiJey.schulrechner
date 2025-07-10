@@ -43,7 +43,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/CardiJey/schulrechner
-        commit: 98d5f1d996c46da2a9db47db2f56bd16484a2511
+        commit: f7d260c7bdbc27bebd1efcb61b59e8e4d75f9346
         dest: main
       - generated-sources.json
       - type: script
