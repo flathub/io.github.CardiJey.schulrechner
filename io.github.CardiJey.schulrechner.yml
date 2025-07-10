@@ -9,7 +9,8 @@ sdk-extensions:
 command: run.sh
 separate-locales: false
 finish-args:
-  - --socket=x11
+  - --socket=fallback-x11
+  - --socket=wayland
   - --device=dri
   - --share=ipc
 build-options:
@@ -42,10 +43,11 @@ modules:
     sources:
       - type: git
         url: https://github.com/CardiJey/schulrechner
-        commit: 98d5f1d996c46da2a9db47db2f56bd16484a2511
+        commit: ed5f2512de086a9a1103c67043248ac25c1a5a7d
         dest: main
       - generated-sources.json
       - type: script
         dest-filename: run.sh
         commands:
+          - export ELECTRON_OZONE_PLATFORM_HINT=wayland
           - zypak-wrapper.sh /app/main/schulrechner "$@"
