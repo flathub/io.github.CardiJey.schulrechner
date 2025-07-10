@@ -49,4 +49,5 @@ modules:
       - type: script
         dest-filename: run.sh
         commands:
+          - export ELECTRON_OZONE_PLATFORM_HINT=wayland
           - zypak-wrapper.sh /app/main/schulrechner "$@"
