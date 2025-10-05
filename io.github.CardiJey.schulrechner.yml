@@ -45,10 +45,6 @@ modules:
         url: https://github.com/CardiJey/schulrechner
         commit: 74f2825b330389f69ef8339a07cc8336601a5956
         dest: main
-      - type: file
-        url: https://github.com/CardiJey/schulrechner/releases/download/v1.11.4/generated-sources.json
-        dest-filename: generated-sources.json
-        sha256: 8b2dd76a6be8264727fd4d08c14fd9fe68a1b9ac41221c62bd65074a3ded28bc
       - generated-sources.json
       - type: script
         dest-filename: run.sh
